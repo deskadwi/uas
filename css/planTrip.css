@@ -1,0 +1,103 @@
+body {
+  background-image: url("../img/pantai.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+#NamaLogo a {
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+
+h3 {
+  text-align: center;
+  font-size: 24pt;
+  font-style: italic;
+  font-weight: bold;
+}
+.Header {
+  margin-top: 0px;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  background-color: rgba(76, 83, 85, 0.84);
+  color: white;
+  justify-content: space-between;
+}
+.NamaLogo {
+  display: inline-block;
+  text-align: left;
+  margin-top: 10px;
+}
+#NamaLogo {
+  font-size: 24pt;
+  font-style: italic;
+}
+
+.menubar {
+  padding-top: 20px;
+  display: inline-block;
+  text-align: center;
+  font-size: 18pt;
+  position: relative;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menubar li {
+  float: left;
+  padding: 10px;
+}
+
+.Sign {
+  display: inline-block;
+  text-align: right;
+  font-size: 18pt;
+  margin: 20px 10px 10px 30px;
+}
+
+.logout {
+  display: inline-block;
+  text-align: right;
+  font-size: 16pt;
+  margin: 10px 20px 10px 10px;
+}
+.tombol {
+  font-weight: bold;
+  border-radius: 10%;
+  width: 100px;
+  height: 40px;
+  background-color: red;
+}
+.content {
+  border-radius: 5%;
+  width: 500px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgb(171, 165, 165, 0.8);
+}
+.inputan {
+  border-radius: 3%;
+  width: 300px;
+}
+.textInputan {
+  border-radius: 3%;
+  width: 300px;
+}
+tr {
+  font-weight: bold;
+}
+.submit {
+  width: 100px;
+  height: 30px;
+  border-radius: 5%;
+}

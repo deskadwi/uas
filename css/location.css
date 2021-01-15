@@ -1,0 +1,119 @@
+body {
+  background-image: url("../img/pantai.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+#user {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+.menubar {
+  padding-top: 20px;
+  display: inline-block;
+  text-align: center;
+  font-size: 18pt;
+  position: relative;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menubar li {
+  float: left;
+  padding: 10px;
+}
+#Academy {
+  border: none;
+  border-bottom: solid 2px;
+  border-color: black;
+}
+
+/* content */
+#location {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+/* Content */
+.Content {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-space-between;
+}
+.box {
+  border: solid rgb(125, 125, 125);
+  border-radius: 10px;
+  width: 70%;
+  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: rgba(192, 187, 187, 0.9);
+  display: flex;
+}
+.Academy {
+  padding: 50px;
+}
+.Academy ul {
+  display: flex;
+}
+.Academy li {
+  padding: 5px;
+}
+.Academy img {
+  border: solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  width: 125px;
+  height: 200px;
+}
+h5 {
+  text-align: center;
+  color: black;
+  font-size: 13pt;
+}
+.location {
+  border: solid rgb(125, 125, 125, 0);
+  border-radius: 10px;
+  width: 20%;
+  margin: 20px;
+  margin-left: 100px;
+  background-color: rgb(125, 125, 125, 0);
+}
+.judul {
+  border: solid rgba(254, 254, 254, 0);
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: white;
+  font-size: 18pt;
+}
+.icon {
+  border: solid rgba(254, 254, 254, 0);
+  border-radius: 15px;
+  background-color: rgba(192, 187, 187, 0.9);
+  display: flex;
+}
+.Nama {
+  font-size: 11pt;
+  color: black;
+}
+.Nama li {
+  padding: 13px;
+}
+
+.logout {
+  display: inline-block;
+  text-align: right;
+  font-size: 16pt;
+  margin: 10px 20px 10px 10px;
+}
+.tombol {
+  font-weight: bold;
+  border-radius: 10%;
+  width: 100px;
+  height: 40px;
+  background-color: red;
+}

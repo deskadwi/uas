@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    padding: 10px;
+    background: url(images/6.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrpper{
+    margin: 100px auto;
+    max-width: 1100px;
+}
+
+.wrpper nav{
+    display: flex;
+    justify-content: center;
+
+}
+
+nav .gallery{
+    display: flex;
+    max-width: 620px;
+    width: 100%;
+    justify-content: center;
+    justify-content: space-between;
+    
+}
+
+nav .gallery .tools{
+    padding: 7px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav .gallery .active,
+nav .gallery .tools:hover{
+    color: white;
+    background: #007bff;
+}
+.image{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.image .gambar{
+    padding: 7px;
+    width: calc(100% / 4);
+}
+.image .gambar.hide{
+    display: none;
+}
+.image .gambar.show{
+    animation: animate 0.4s ease;
+}
+@keyframes animate{
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.image .gambar span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.image .gambar img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+.image .gambar:hover img{
+    transform: scale(1.1);
+}
+
+.view-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #fff;
+    max-width: 700px;
+    width: 100%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    padding: 0 5px 5px 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+.view-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+.view-box .details{
+    display: flex;
+    align-items: center;
+    padding: 13px 15px 13px 10px;
+    justify-content: space-between;
+}
+.view-box .details .tittle{
+    display: flex; 
+    font-size: 18px;
+    font-weight: 400;
+}
+.details .tittle p{
+    margin-left: 5px;
+    font-weight: 500;
+}
+.details .icon{
+    color: #007bff;
+    font-size: 22px;
+    cursor: pointer;
+}
+.view-box .box-image{
+    display: flex;
+    width: 100%;  
+}
+.box-image img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+}
+.shadow.show{
+    display: block;
+}
+
+
+
+
+@media(max-width: 1000px){
+    image .gambar{
+        width: calc(100% / 3);
+    }
+}
+@media(max-width: 800px){
+    image .gambar{
+        width: calc(100% / 2);
+    }
+}
+@media(max-width: 700px){
+    nav .gallery{
+        max-width: 600px;
+    }
+    nav .gallery .tools{
+        padding: 7px 15px;
+    }
+}
+@media(max-width: 600px){
+    nav .gallery{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav .gallery .tools{
+        margin: 5px;
+    }
+    image .gambar{
+        width: 100%;
+    }
+}

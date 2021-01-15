@@ -1,0 +1,318 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-family: "Montserrat", montserrat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#headermenu {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+}
+
+#headermenu .headermenu {
+  min-height: 8vh;
+  background-color: rgb(31, 30, 30, 0.24);
+  color: white;
+  font-family: Great Wishes;
+  font-size: 15px;
+}
+
+#headermenu .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
+}
+
+#headermenu .nav-list ul {
+  list-style: none;
+  position: absolute;
+  background-color: rgb(31, 30, 30);
+  width: 100vw;
+  height: 100vh;
+  left: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s ease left;
+}
+#headermenu .nav-list ul.active {
+  left: 0%;
+}
+#headermenu .nav-list ul a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+  font-size: 20px;
+}
+
+#headermenu .nav-list ul a::after {
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgb(240, 248, 255, 0.021);
+  font-size: 6rem;
+  letter-spacing: 50px;
+  z-index: -1;
+  transition: 0.3s ease letter-spacing;
+}
+
+#headermenu .nav-list ul li:hover a::after {
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+#headermenu .nav-list ul li:hover a {
+  color: cadetblue;
+}
+#headermenu .hamburger {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(0.6);
+  margin-right: 2px;
+}
+
+#headermenu .hamburger::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: tambahan_hamburger 3s ease infinite;
+}
+#headermenu .hamburger .bar {
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
+}
+
+#headermenu .hamburger .bar::after,
+#headermenu .hamburger .bar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s ease;
+  transition-property: top, bottom;
+}
+
+#headermenu .hamburger .bar::after {
+  top: 8px;
+}
+
+#headermenu .hamburger .bar::before {
+  bottom: 8px;
+}
+
+#headermenu .hamburger.active .bar::before {
+  bottom: 0;
+}
+#headermenu .hamburger.active .bar::after {
+  top: 0;
+}
+
+#headermenu a {
+  font-family: Montserrat;
+  font-size: 18px;
+}
+
+#us {
+  background-image: url("../img/imageHome.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+#us::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -1;
+}
+#us .us {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#us h1 {
+  display: block;
+  width: fit-content;
+  font-size: 3rem;
+  position: relative;
+  color: transparent;
+  animation: bentuk_text 0.5s ease forwards;
+  animation-delay: 1ss;
+}
+
+#us h1:nth-child(1) {
+  animation-delay: 1s;
+  font-style: italic;
+}
+
+#us h1:nth-child(2) {
+  animation: bentuk_text_nama2 0.5s ease forwards;
+  animation-delay: 2s;
+}
+
+#us h1:nth-child(3) {
+  animation: bentuk_text_nama 0.5s ease forwards;
+  animation-delay: 3s;
+  font-style: italic;
+}
+
+#us h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: aquamarine;
+  animation: text_berbentuk_box 1s ease;
+  animation-delay: 0.3s;
+}
+
+#us h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+
+#us h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+
+#us h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+
+#us .cta {
+  display: inline-block;
+  padding: 20px 40px;
+  color: black;
+  background-color: transparent;
+  border: 4px solid rgb(112, 183, 192);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  margin-top: 20px;
+  transition: background-color, color;
+}
+
+#us .cta:hover {
+  color: white;
+  background-color: rgb(112, 183, 192);
+}
+@keyframes tambahan_hamburger {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
+@keyframes text_berbentuk_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes bentuk_text {
+  100% {
+    color: #9ddeee;
+  }
+}
+
+@keyframes bentuk_text_nama {
+  100% {
+    color: #9ddeee;
+    font-weight: 500;
+  }
+}
+
+@keyframes bentuk_text_nama2 {
+  100% {
+    color: lightcyan;
+    font-weight: 500;
+  }
+}
+
+/* headermenu */
+#headermenu .hamburger {
+  display: none;
+}
+#headermenu .nav-list ul {
+  position: initial;
+  display: block;
+  height: auto;
+  width: fit-content;
+  background-color: transparent;
+}
+#headermenu .nav-list ul li {
+  display: inline-block;
+}
+#headermenu .nav-list ul li a {
+  font-size: 0.9rem;
+}
+#headermenu .nav-list ul a::after {
+  display: none;
+}

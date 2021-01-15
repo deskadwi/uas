@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sign In/Sign Up - Go Travelling</title>
+     <link rel="stylesheet" href="css/styleSigin.css">
+ </head>
+ <body>
+    <div class="container right-panel-active">
+        <div class="container__form container--signup">
+            <form action="home.html" class="form" id="form1">
+                <h2 class="form__title">Sign Up</h2>    
+                <input type="text" placeholder="Username" class="input">
+                <input type="password" placeholder="Password" class="input">
+                <input type="text" placeholder="City" class="input">
+                <input type="email" placeholder="Email" class="input">
+                <tr>
+                    <td>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="male" value="male"><br>
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                    </td>
+                </tr>
+                <a href="home.html"><input type="submit" class="btn" value="Sign Up"></a>      
+            </form>
+        </div>
+        <div class="container__form container--signin">
+            <form action="home.html" class="form" id="form2">
+                <h2 class="form__title">Sign In</h2>
+                <input type="email" placeholder="Email/Username" class="input">
+                <input type="password" placeholder="Password" class="input">
+                <a href="ygp.html" class="link">Forgot your password?</a>
+                <input type="submit" class="btn" value="Sign in">        
+            </form>
+        </div>
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <input type="submit" id="signIn" class="btn" value="Sign Up">        
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <a href="home.html"><input type="submit" class="btn" value="Sign In"></a>      
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+const signInBtn = document.getElementById('signIn');
+const signUpBtn = document.getElementById('signUp');
+const fistForm = document.getElementById('form1');
+const secondForm = document.getElementById('form2');
+const container = document.querySelector('.container');
+
+signInBtn.addEventListener("click", () => {
+	container.classList.remove('right-panel-active');
+});
+
+signUpBtn.addEventListener("click", () => {
+	container.classList.add('right-panel-active');
+});
+
+fistForm.addEventListener("submit", (e) => e.preventDefault());
+secondForm.addEventListener("submit", (e) => e.preventDefault());
+    </script>
+ </body>
+ </html>

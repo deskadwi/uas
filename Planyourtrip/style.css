@@ -1,0 +1,103 @@
+body {
+    background-image: url("hotel.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
+  a {
+    color: gray;
+    text-decoration: none;
+  }
+  #NamaLogo a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: gray;
+  }
+  
+  .content h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-family: Montserrat ;
+    font-style: italic;
+  }
+  .Header {
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background-color: rgba(31, 32, 32, 0.84);
+    color: white;
+    justify-content: space-between;
+  }
+  .NamaLogo {
+    display: inline-block;
+    text-align: left;
+    margin-top: 10px;
+  }
+  #NamaLogo {
+    font-size: 24pt;
+    font-style: italic;
+  }
+
+
+  .content {
+    background: transparent;
+    border-radius: 2%;
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(36, 35, 35, 0.8);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+  }
+  .inputan {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    
+  }
+  .textInputan {
+    border-radius: 3%;
+    width: 300px;
+  }
+  tr {
+    font-weight: bold;
+    color: #fff;
+  }
+ .submit {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: gray;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .back {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: gray;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .submit:hover {
+    color: black;
+  }
+  .back:hover {
+    color: black;
+  }
+  
